@@ -64,8 +64,125 @@ body {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
 }
 
+.hero {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hero-outer {
   background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
   min-height: 100vh;
+}
+
+.header {
+  --header-gap-top: 40px;
+  padding-top: var(--header-gap-top);
+}
+
+@media (min-width: 768px) {
+  .header {
+    --header-gap-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    --header-gap-top: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__logo-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__logo-info {
+    gap: 50px;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 146px;
+  height: 102px;
+  background: url(../assets/icons/logo-sm.svg);
+  background-size: 146px 102px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    width: 300px;
+    height: 63px;
+    background: url(../assets/icons/logo.svg);
+    background-size: 300px 63px;
+    margin-bottom: 0;
+  }
+}
+
+.header__slogan {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+@media (min-width: 768px) {
+  .header__slogan {
+    max-width: 10ch;
+  }
+}
+
+.header__contact {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__contact {
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header__contact-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: black;
+}
+
+.header__contact-link:hover, .header__contact-link:focus {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

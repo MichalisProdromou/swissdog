@@ -16,8 +16,87 @@ body {
 }
 
 .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   &-outer {
     background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
     min-height: 100vh;
+  }
+}
+
+.header {
+  --header-gap-top: 40px;
+  padding-top: var(--header-gap-top);
+
+  @media (min-width: 768px) {
+    --header-gap-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @media (min-width: 1440px) {
+    --header-gap-top: 100px;
+  }
+
+  &__logo-info {
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 40px;
+    }
+    @media (min-width: 1440px) {
+      gap: 50px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 146px;
+    height: 102px;
+    background: url(../assets/icons/logo-sm.svg);
+    background-size: 146px 102px;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      width: 300px;
+      height: 63px;
+      background: url(../assets/icons/logo.svg);
+      background-size: 300px 63px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__slogan {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    @media (min-width: 768px) {
+      max-width: 10ch;
+    }
+  }
+
+  &__contact {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }
