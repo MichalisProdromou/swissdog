@@ -1,4 +1,6 @@
 @import "_fonts";
+@import "_variables";
+@import "_helpers";
 
 *,
 *::before,
@@ -11,4 +13,11 @@
 html,
 body {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  &-outer {
+    background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
+    min-height: 100vh;
+  }
 }

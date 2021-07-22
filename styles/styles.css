@@ -27,6 +27,29 @@
   font-style: normal;
 }
 
+:root {
+  --gap-md: 34px;
+  --gap-lg: 190px;
+}
+
+.container {
+  --cont-padding: 25px;
+  padding-left: var(--cont-padding);
+  padding-right: var(--cont-padding);
+}
+
+@media (min-width: 768px) {
+  .container {
+    --cont-padding: var(--gap-md);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    --cont-padding: var(--gap-lg);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -39,5 +62,10 @@
 html,
 body {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
+}
+
+.hero-outer {
+  background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */

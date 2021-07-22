@@ -1,0 +1,12 @@
+.container {
+  --cont-padding: 25px;
+  padding-left: var(--cont-padding);
+  padding-right: var(--cont-padding);
+
+  @media (min-width: 768px) {
+    --cont-padding: var(--gap-md);
+  }
+  @media (min-width: 1440px) {
+    --cont-padding: var(--gap-lg);
+  }
+}
