@@ -30,6 +30,7 @@
 :root {
   --gap-md: 34px;
   --gap-lg: 190px;
+  --gap-xl: 15px;
 }
 
 .container {
@@ -73,6 +74,12 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .container {
+    --cont-padding: var(--gap-xl);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -106,7 +113,7 @@ body {
 }
 
 .hero-outer {
-  background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
+  background: url(../assets/images/hero-bg.jpg) top/cover no-repeat;
   min-height: 100vh;
 }
 

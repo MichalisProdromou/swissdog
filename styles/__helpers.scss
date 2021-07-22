@@ -27,4 +27,8 @@
     --cont-padding: var(--gap-lg);
     --cont-m-width: 1320px;
   }
+
+  @media (min-width: 1600px) {
+    --cont-padding: var(--gap-xl);
+  }
 }
