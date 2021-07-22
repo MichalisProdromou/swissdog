@@ -18,14 +18,14 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(var(--inner-height, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   &-outer {
     background: url(../assets/images/hero-bg.jpg) top/cover no-repeat;
-    min-height: 100vh;
+    min-height: calc(var(--inner-height, 1vh) * 100);
   }
 }
 
