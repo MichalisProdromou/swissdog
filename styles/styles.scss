@@ -1,4 +1,6 @@
 @import "_fonts";
+@import "_variables";
+@import "_helpers";
 
 *,
 *::before,
@@ -11,4 +13,250 @@
 html,
 body {
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &-outer {
+    background: url(../assets/images/hero-bg.jpg) center/cover no-repeat;
+    min-height: 100vh;
+  }
+}
+
+.header {
+  --header-gap-top: 40px;
+  margin-top: var(--header-gap-top);
+
+  @media (min-width: 768px) {
+    --header-gap-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @media (min-width: 1440px) {
+    --header-gap-top: 100px;
+  }
+
+  &__logo-info {
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 40px;
+    }
+    @media (min-width: 1440px) {
+      gap: 50px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 146px;
+    height: 102px;
+    background: url(../assets/icons/logo-sm.svg);
+    background-size: 146px 102px;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      width: 300px;
+      height: 63px;
+      background: url(../assets/icons/logo.svg);
+      background-size: 300px 63px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__slogan {
+    font-size: 14px;
+    line-height: 14px;
+    @media (min-width: 768px) {
+      max-width: 10ch;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+  }
+
+  &__contact {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    &-link {
+      font-size: 16px;
+      line-height: 22px;
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  @media (min-width: 768px) {
+    align-self: flex-start;
+  }
+
+  &__info {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+      line-height: 34px;
+      text-align: start;
+      max-width: 330px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__contact-link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &--mail {
+      background: url(../assets/icons/email-icon.svg);
+    }
+
+    &--phone {
+      background: url(../assets/icons/phone-icon.svg);
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 0 25px;
+  --footer-gap-bottom: 20px;
+  margin-bottom: var(--footer-gap-bottom);
+
+  @media (min-width: 768px) {
+    padding: 0;
+    --footer-gap-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (min-width: 1440px) {
+    --footer-gap-bottom: 100px;
+  }
+
+  &__txt-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      text-align: start;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__swiss-flag {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 28px;
+    height: 18px;
+    background-size: 28px 18px;
+    background: url(../assets/icons/swiss-flag.svg);
+  }
+
+  &__txt {
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 auto 23px;
+    max-width: 120px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin: 0;
+      max-width: none;
+    }
+  }
+
+  &__links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      order: -1;
+      gap: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-indent: -9999px;
+
+    @media (min-width: 768px) {
+      text-indent: 0;
+      background: none !important;
+      width: auto !important;
+      height: auto !important;
+      font-size: 16px;
+      line-height: 1;
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &--facebook {
+      width: 11px;
+      height: 26px;
+      background-size: 11px 26px;
+      background: url(../assets/icons/facebook-logo.svg) no-repeat;
+    }
+
+    &--linked-in {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      background: url(../assets/icons/linked-in-logo.svg) no-repeat;
+    }
+
+    &--twitter {
+      width: 22px;
+      height: 17px;
+      background-size: 22px 17px;
+      background: url(../assets/icons/twitter-logo.svg) no-repeat;
+    }
+
+    &--youtube {
+      width: 26px;
+      height: 19px;
+      background-size: 26px 19px;
+      background: url(../assets/icons/YouTube-logo.svg) no-repeat;
+    }
+  }
 }
