@@ -1,6 +1,7 @@
 @import "_fonts";
 @import "_variables";
 @import "_helpers";
+@import "_mixins";
 
 *,
 *::before,
@@ -53,26 +54,18 @@ body {
   }
 
   &__logo {
-    display: inline-block;
-    text-indent: -9999px;
-    width: 146px;
-    height: 102px;
-    background: url(../assets/icons/logo-sm.svg);
-    background-size: 146px 102px;
+    @include icon-link(146px, 102px, "../assets/icons/logo-sm.svg");
     margin-bottom: 10px;
 
     @media (min-width: 768px) {
-      width: 300px;
-      height: 63px;
-      background: url(../assets/icons/logo.svg);
-      background-size: 300px 63px;
+      @include icon-link(300px, 63px, "../assets/icons/logo.svg");
       margin-bottom: 0;
     }
   }
 
   &__slogan {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 1;
     @media (min-width: 768px) {
       max-width: 10ch;
       line-height: 16px;
@@ -132,22 +125,15 @@ body {
   }
 
   &__contact-link {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-size: 32px 32px;
-
     @media (min-width: 768px) {
-      display: none;
+      display: none !important;
     }
-
-    &--mail {
-      background: url(../assets/icons/email-icon.svg);
-    }
-
-    &--phone {
-      background: url(../assets/icons/phone-icon.svg);
-    }
+  }
+  &__contact-link--mail {
+    @include icon-link(32px, 32px, "../assets/icons/email-icon.svg");
+  }
+  &__contact-link--phone {
+    @include icon-link(32px, 32px, "../assets/icons/phone-icon.svg");
   }
 }
 
@@ -180,12 +166,7 @@ body {
   }
 
   &__swiss-flag {
-    display: inline-block;
-    text-indent: -9999px;
-    width: 28px;
-    height: 18px;
-    background-size: 28px 18px;
-    background: url(../assets/icons/swiss-flag.svg);
+    @include icon-link(28px, 18px, "../assets/icons/swiss-flag.svg");
   }
 
   &__txt {
@@ -212,11 +193,8 @@ body {
   }
 
   &__link {
-    display: inline-block;
-    text-indent: -9999px;
-
     @media (min-width: 768px) {
-      text-indent: 0;
+      text-indent: 0 !important;
       background: none !important;
       width: auto !important;
       height: auto !important;
@@ -232,31 +210,19 @@ body {
     }
 
     &--facebook {
-      width: 11px;
-      height: 26px;
-      background-size: 11px 26px;
-      background: url(../assets/icons/facebook-logo.svg) no-repeat;
+      @include icon-link(11px, 26px, "../assets/icons/facebook-logo.svg");
     }
 
     &--linked-in {
-      width: 20px;
-      height: 20px;
-      background-size: 20px 20px;
-      background: url(../assets/icons/linked-in-logo.svg) no-repeat;
+      @include icon-link(20px, 20px, "../assets/icons/linked-in-logo.svg");
     }
 
     &--twitter {
-      width: 22px;
-      height: 17px;
-      background-size: 22px 17px;
-      background: url(../assets/icons/twitter-logo.svg) no-repeat;
+      @include icon-link(22px, 17px, "../assets/icons/twitter-logo.svg");
     }
 
     &--youtube {
-      width: 26px;
-      height: 19px;
-      background-size: 26px 19px;
-      background: url(../assets/icons/YouTube-logo.svg) no-repeat;
+      @include icon-link(26px, 19px, "../assets/icons/YouTube-logo.svg");
     }
   }
 }

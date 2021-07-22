@@ -161,24 +161,26 @@ body {
   text-indent: -9999px;
   width: 146px;
   height: 102px;
-  background: url(../assets/icons/logo-sm.svg);
   background-size: 146px 102px;
+  background: url("../assets/icons/logo-sm.svg") no-repeat;
   margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
   .header__logo {
+    display: inline-block;
+    text-indent: -9999px;
     width: 300px;
     height: 63px;
-    background: url(../assets/icons/logo.svg);
     background-size: 300px 63px;
+    background: url("../assets/icons/logo.svg") no-repeat;
     margin-bottom: 0;
   }
 }
 
 .header__slogan {
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
 }
 
 @media (min-width: 768px) {
@@ -261,25 +263,28 @@ body {
   }
 }
 
-.main__contact-link {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-size: 32px 32px;
-}
-
 @media (min-width: 768px) {
   .main__contact-link {
-    display: none;
+    display: none !important;
   }
 }
 
 .main__contact-link--mail {
-  background: url(../assets/icons/email-icon.svg);
+  display: inline-block;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  background: url("../assets/icons/email-icon.svg") no-repeat;
 }
 
 .main__contact-link--phone {
-  background: url(../assets/icons/phone-icon.svg);
+  display: inline-block;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  background: url("../assets/icons/phone-icon.svg") no-repeat;
 }
 
 .footer {
@@ -338,7 +343,7 @@ body {
   width: 28px;
   height: 18px;
   background-size: 28px 18px;
-  background: url(../assets/icons/swiss-flag.svg);
+  background: url("../assets/icons/swiss-flag.svg") no-repeat;
 }
 
 .footer__txt {
@@ -377,14 +382,9 @@ body {
   }
 }
 
-.footer__link {
-  display: inline-block;
-  text-indent: -9999px;
-}
-
 @media (min-width: 768px) {
   .footer__link {
-    text-indent: 0;
+    text-indent: 0 !important;
     background: none !important;
     width: auto !important;
     height: auto !important;
@@ -399,30 +399,38 @@ body {
 }
 
 .footer__link--facebook {
+  display: inline-block;
+  text-indent: -9999px;
   width: 11px;
   height: 26px;
   background-size: 11px 26px;
-  background: url(../assets/icons/facebook-logo.svg) no-repeat;
+  background: url("../assets/icons/facebook-logo.svg") no-repeat;
 }
 
 .footer__link--linked-in {
+  display: inline-block;
+  text-indent: -9999px;
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-  background: url(../assets/icons/linked-in-logo.svg) no-repeat;
+  background: url("../assets/icons/linked-in-logo.svg") no-repeat;
 }
 
 .footer__link--twitter {
+  display: inline-block;
+  text-indent: -9999px;
   width: 22px;
   height: 17px;
   background-size: 22px 17px;
-  background: url(../assets/icons/twitter-logo.svg) no-repeat;
+  background: url("../assets/icons/twitter-logo.svg") no-repeat;
 }
 
 .footer__link--youtube {
+  display: inline-block;
+  text-indent: -9999px;
   width: 26px;
   height: 19px;
   background-size: 26px 19px;
-  background: url(../assets/icons/YouTube-logo.svg) no-repeat;
+  background: url("../assets/icons/YouTube-logo.svg") no-repeat;
 }
 /*# sourceMappingURL=styles.css.map */
