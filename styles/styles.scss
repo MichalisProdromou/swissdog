@@ -139,12 +139,10 @@ body {
 
 .footer {
   width: 100%;
-  padding: 0 25px;
   --footer-gap-bottom: 20px;
   margin-bottom: var(--footer-gap-bottom);
 
   @media (min-width: 768px) {
-    padding: 0;
     --footer-gap-bottom: 50px;
     display: flex;
     justify-content: space-between;
@@ -185,7 +183,8 @@ body {
   &__links-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 24px;
+    justify-content: center;
     @media (min-width: 768px) {
       order: -1;
       gap: 15px;
@@ -213,16 +212,8 @@ body {
       @include icon-link(11px, 26px, "../assets/icons/facebook-logo.svg");
     }
 
-    &--linked-in {
-      @include icon-link(20px, 20px, "../assets/icons/linked-in-logo.svg");
-    }
-
-    &--twitter {
-      @include icon-link(22px, 17px, "../assets/icons/twitter-logo.svg");
-    }
-
-    &--youtube {
-      @include icon-link(26px, 19px, "../assets/icons/YouTube-logo.svg");
+    &--instagram {
+      @include icon-link(26px, 26px, "../assets/icons/instagram-logo.svg");
     }
   }
 }

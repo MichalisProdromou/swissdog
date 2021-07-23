@@ -289,14 +289,12 @@ body {
 
 .footer {
   width: 100%;
-  padding: 0 25px;
   --footer-gap-bottom: 20px;
   margin-bottom: var(--footer-gap-bottom);
 }
 
 @media (min-width: 768px) {
   .footer {
-    padding: 0;
     --footer-gap-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,9 +366,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -407,30 +406,12 @@ body {
   background: url("../assets/icons/facebook-logo.svg") no-repeat;
 }
 
-.footer__link--linked-in {
-  display: inline-block;
-  text-indent: -9999px;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-  background: url("../assets/icons/linked-in-logo.svg") no-repeat;
-}
-
-.footer__link--twitter {
-  display: inline-block;
-  text-indent: -9999px;
-  width: 22px;
-  height: 17px;
-  background-size: 22px 17px;
-  background: url("../assets/icons/twitter-logo.svg") no-repeat;
-}
-
-.footer__link--youtube {
+.footer__link--instagram {
   display: inline-block;
   text-indent: -9999px;
   width: 26px;
-  height: 19px;
-  background-size: 26px 19px;
-  background: url("../assets/icons/YouTube-logo.svg") no-repeat;
+  height: 26px;
+  background-size: 26px 26px;
+  background: url("../assets/icons/instagram-logo.svg") no-repeat;
 }
 /*# sourceMappingURL=styles.css.map */
